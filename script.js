@@ -1,6 +1,3 @@
-const apiKey = "19735c9a";
-const apiEndpoint = "http://www.omdbapi.com/";
-
 function createMovieCard(movie) {
   const card = document.createElement("div");
   card.className = "card";
@@ -36,7 +33,7 @@ function createMovieCard(movie) {
   const year = document.createElement("p");
   year.className = "year";
   year.textContent = movie.Year;
-  
+
   detail.appendChild(ratingCont);
   detail.appendChild(year);
   card.appendChild(posterCont);
@@ -47,7 +44,7 @@ function createMovieCard(movie) {
 
 function fetchPopularMovies() {
   axios
-    .get(`${apiEndpoint}?apikey=${apiKey}&s=avengers&type=movie`)
+    .get("https://www.omdbapi.com/?apikey=19735c9a&s=avengers&type=movie")
     .then((response) => {
       const popularMovies = response.data.Search.slice(0, 6);
       const movieList = document.querySelector("#list");
@@ -63,7 +60,11 @@ function fetchPopularMovies() {
 
 function OnChangeSearch(searchParam) {
   axios
-    .get(`${apiEndpoint}?apikey=${apiKey}&s=${searchParam}&type=movie`)
+    .get(
+      "https://www.omdbapi.com/?apikey=19735c9a&s=" +
+        searchParam +
+        "&type=movie"
+    )
     .then(function (response) {
       const searchList = document.querySelector("#search-result");
       clearSearchResults();
