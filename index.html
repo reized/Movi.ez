@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
+    <title>Moviez</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="">
+      <a href="#" class="logo">Movi<span>ez</span></a>
+      <form id="form">
+        <input type="text" placeholder="Search" id="search" class="search" />
+      </form>
+      <a class="account">
+        <p class="name">Sign Up</p>
+        <img src="img/profile-pic.png" alt="" class="pic" />
+      </a>
+    </header>
+    <main class="container">
+      <div id="search-result" ></div>
+      <div id="slide">
+        <div class="s-movie">
+          <div class="movie-cont">
+            <h1 class="s-title">The Avengers</h1>
+            <div class="s-detail">
+              <p class="year">2017</p>
+              <p class="s-rating">8.5</p>
+            </div>
+            <p class="s-genre">Action, Adventure, Comedy</p>
+            <p class="s-plot">
+              The Guardians struggle to keep together as a team while dealing
+              with their personal family issues, notably Star-Lord's encounter
+              with his father, the ambitious celestial being Ego.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="category">
+        <div class="cat-head">
+          <p class="popular">Popular</p>
+          <p class="see">See All</p>
+        </div>
+        <div id="list">
+          
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
